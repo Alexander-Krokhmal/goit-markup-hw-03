@@ -36,6 +36,7 @@ body > letter-spacing: 0.03em;
 }
 
 body {
+  margin: 0;
   background-color: var(--main-bgc-color);
   color: var(--main-text-color);
   font-family: var(--main-font);
@@ -64,7 +65,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 1px dashed red;
+  /* outline: 1px dashed red; */
 }
 
 h1,
@@ -83,9 +84,12 @@ p {
 .link {
   text-decoration: none;
   display: block;
+  color: inherit;
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -155,6 +159,11 @@ img {
   color: var(--accent-color);
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* Hero section */
 .hero {
   padding-top: 200px;
@@ -205,10 +214,6 @@ img {
   background-color: var(--btn-bgc-hover);
 }
 /* Benefits */
-.benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .benefits-list {
   display: flex;
   align-items: center;
@@ -234,7 +239,7 @@ img {
 }
 /* About us */
 .about {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 .about-title {
   padding-bottom: 50px;
@@ -260,9 +265,6 @@ img {
 }
 /* Our team */
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
   background-color: var(--secondary-bgc-color);
 }
 .team-list {
@@ -348,13 +350,7 @@ img {
 
 /* Portfolio page */
 /* Site navigation */
-.portfolio-container {
-  width: 1170px;
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -403,18 +399,24 @@ img {
   /* color: var(--bold-text-color); */
 }
 /* Work examples */
-.work-examples {
+.list.work-examples {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -30px;
+  margin-top: -30px;
 }
 .work-examples .item {
+  display: block;
   margin-right: 30px;
-}
-.work-examples .item:nth-child(3n + 3) {
+  margin-top: 30px;
+
+  /* .work-examples .item:nth-child(3n) 
   margin-right: 0;
+  margin-bottom: 0; */
 }
 .work-examples .link {
-  width: 370px;
+  /* width: calc(100%-90px) / 3; */
+  width: 380px;
   /* height: 404px;
   left: 215px;
   top: 262px; */
@@ -423,7 +425,7 @@ img {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
 }
-.link .work-examples-title {
+.work-examples-title {
   margin-bottom: 4px;
   margin-left: 24px;
   margin-right: 24px;
@@ -434,7 +436,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--bold-text-color);
 }
-.link .work-examples-text {
+.work-examples-text {
   margin-bottom: 20px;
   margin-left: 24px;
   margin-right: 24px;
