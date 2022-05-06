@@ -57,14 +57,43 @@ body {
   margin: -1px;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 1px dashed red;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
+  display: block;
 }
+img {
+  display: block;
+}
+
 /* Header */
 .logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 93px;
+
   text-decoration: none;
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -79,14 +108,40 @@ body {
   color: var(--white-text-color);
 }
 
+.nav,
+.header-nav,
+.header-contacts,
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-container {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-nav .link,
 .header-contacts .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-family: var(--main-font);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--bold-text-color);
 }
+.header-nav .item,
+.header-contacts .item {
+  margin-right: 50px;
+}
+.header-nav .item:last-child,
+.header-contacts .item:last-child {
+  margin-right: 0;
+}
+.header-contacts {
+  margin-left: auto;
+}
+
 .header-contacts .link {
   color: var(--main-text-color);
 }
@@ -99,8 +154,14 @@ body {
 .link.current {
   color: var(--accent-color);
 }
+
 /* Hero section */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-bgc-color);
   color: var(--white-text-color);
 
@@ -108,14 +169,26 @@ body {
 }
 .hero-title,
 .section-title {
+  width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
-  /* width: 696px; */
 }
 .hero-button {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+
+  padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -123,16 +196,33 @@ body {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  display: flex;
-  align-items: center;
+  border: 0;
   text-align: center;
+
   cursor: pointer;
 }
 .hero-button:hover {
   background-color: var(--btn-bgc-hover);
 }
 /* Benefits */
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.benefits-list {
+  display: flex;
+  align-items: center;
+}
+.benefits-list .item {
+  margin-right: 30px;
+}
+.benefits-list .item:last-child {
+  margin: 0;
+}
+
 .benefits .benefits-title-list {
+  padding-bottom: 10px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -143,42 +233,101 @@ body {
   line-height: 1.71;
 }
 /* About us */
+.about {
+  padding-bottom: 94px;
+}
 .about-title {
+  padding-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--bold-text-color);
+}
+.about-list {
+  display: flex;
+  align-items: center;
+}
+.about-list .item {
+  margin-right: 30px;
+
+  background: url(close-up-image-programer-working-his-desk-office_1098-18707.jpg);
+  mix-blend-mode: normal;
+}
+.about-list .item:last-child {
+  margin-right: 0;
 }
 /* Our team */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
   background-color: var(--secondary-bgc-color);
 }
-.team .item {
+.team-list {
+  display: flex;
+  align-items: center;
+}
+.team-list .item {
+  margin-right: 30px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
   background-color: var(--main-bgc-color);
 }
+.team-list .item:last-child {
+  margin-right: 0;
+}
 .team-title {
+  padding-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--bold-text-color);
 }
+.team-img {
+  margin-bottom: 30px;
+}
 .team-name {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  /* text-align: center; */
+  text-align: center;
   color: var(--bold-text-color);
 }
 .team-ability {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.19;
-  /* text-align: center; */
+  text-align: center;
 }
 /* Footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--dark-bgc-color);
+}
+.footer .logo {
+  display: block;
+
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.footer-list .item {
+  margin-bottom: 9px;
+}
+.footer-list .item:last-child {
+  margin-bottom: 0;
 }
 .footer-adress .link {
   line-height: 1.71;
@@ -199,7 +348,29 @@ body {
 
 /* Portfolio page */
 /* Site navigation */
+.portfolio-container {
+  width: 1170px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.site-nav .item {
+  margin-right: 8px;
+}
+.site-nav .item:last-child {
+  margin-right: 0;
+}
+
 .site-product > .portfolio-btn {
+  padding: 6px 22px;
+
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
@@ -212,6 +383,7 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .site-product > .active-btn {
   background: var(--accent-color);
   color: var(--white-text-color);
@@ -231,7 +403,17 @@ body {
   /* color: var(--bold-text-color); */
 }
 /* Work examples */
-.link-work .link {
+.work-examples {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-examples .item {
+  margin-right: 30px;
+}
+.work-examples .item:nth-child(3n + 3) {
+  margin-right: 0;
+}
+.work-examples .link {
   width: 370px;
   /* height: 404px;
   left: 215px;
@@ -242,6 +424,10 @@ body {
   box-sizing: border-box;
 }
 .link .work-examples-title {
+  margin-bottom: 4px;
+  margin-left: 24px;
+  margin-right: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -249,8 +435,15 @@ body {
   color: var(--bold-text-color);
 }
 .link .work-examples-text {
+  margin-bottom: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
+
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+.portfolio-img {
+  margin-bottom: 20px;
 }
