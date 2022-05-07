@@ -401,6 +401,7 @@ img {
 .work-examples .item {
   margin: 15px;
   /* width: 370px; */
+  flex-basis: calc((100% / 3) - 30px);
 }
 
 .work-examples .link {
